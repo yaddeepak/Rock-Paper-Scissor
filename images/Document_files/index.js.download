@@ -1,0 +1,17 @@
+var alldrum=document.querySelectorAll(".drum");
+for(var i=0;i<alldrum.length;++i){
+    var link;
+    if(i===0)
+    {
+        link="Audio/"+(i+1)+".mp3";
+    }
+    else
+    {
+        link="Audio/"+(i+1)+".wav";
+    }
+    console.log(link);
+    alldrum[i].addEventListener("click",function(){    
+         var audio=new Audio(link);
+         audio.play();
+    });
+}
